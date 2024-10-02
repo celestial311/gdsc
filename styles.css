@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 140vh;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+}
+
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.section-left {
+    background: linear-gradient(135deg, #000000, #ff5722, #ff9800);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.section-top {
+    background: linear-gradient(135deg, #ffeb3b, #ff9800, #000000);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+.section-middle {
+    background: linear-gradient(135deg, #004080, #003366, #001f3f);
+    height: 70vh;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2rem;
+}
+
+.section-right {
+    background: linear-gradient(135deg, #003300, #005900, #006600);
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+}
+
+.section-bottom-left {
+    background: linear-gradient(135deg, #6a004f, #4a004a, #3a0033);
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 191%;
+    font-family: 'Mistral', cursive;
+}
+
+.section-bottom-right {
+    background: linear-gradient(135deg, #8a6a7a, #6a3a61, #3d2a47);
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    margin-left: -50px;
+    width: 112%;
+    font-family: 'Dancing Script', cursive;
+}
+
+.typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #ff5a5f;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite, reset 10s infinite; 
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    80% { width: 100%; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #ff5a5f; }
+}
+
+@keyframes reset {
+    0%, 80% { opacity: 1; }
+    100% { opacity: 0; }
+}
